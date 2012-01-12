@@ -214,7 +214,7 @@ class user
 				self::$_username = $user->username;
 				self::$_password = $user->password;
 				self::$_type = $user->type;
-				self::$_data = $user->data;
+				self::$_data = json_decode($user->data);
 				
 				// If not banned, mark as valid
 				if(self::$_type != 'banned')
